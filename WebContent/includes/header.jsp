@@ -1,24 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=UTF-8">
-<title>Title</title>
-</head>
-<body>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
-
+<title>LOL Admin 2</title>
+</head>
     <!-- Bootstrap Core CSS -->
     <link href="../resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -59,7 +50,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.jsp">LOL Admin 2</a>
+                <a class="navbar-brand" href="../index.jsp">LOL Admin 2</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -288,7 +279,7 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="index.jsp"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="../index.jsp"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                                                    
                         
@@ -421,5 +412,3 @@
 
     <!-- jQuery -->
     <script src="/resources/vendor/jquery/jquery.min.js"></script>
-</body>
-</html>
