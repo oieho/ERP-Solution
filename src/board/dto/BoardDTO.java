@@ -1,6 +1,6 @@
 package board.dto;
 public class BoardDTO {
-private int client_n_seq;
+private int client_n_seq, max_client_n_seq;
 private String client_code, clientname, client_idn;
 
 
@@ -45,6 +45,17 @@ private String client_code, clientname, client_idn;
 
 	public void setClient_idn(String client_idn) {
 		this.client_idn = client_idn;
+	}
+
+
+
+	public int getMax_client_n_seq() {
+		return max_client_n_seq;
+	}
+
+
+	public void setMax_client_n_seq(int max_client_n_seq) {
+		this.max_client_n_seq = max_client_n_seq;
 	}
 
 

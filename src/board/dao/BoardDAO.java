@@ -46,15 +46,55 @@ public class BoardDAO {
 				data.setClient_idn(rs.getString("client_idn"));
 				
 				client_page.add(data);
-			
+
 			} // end while
 			
-			rs.close();	pstmt.close(); con.close();
 		} catch(Exception e){
 			System.out.println("SELECT ERR :"+e.getMessage());
 		}
 		
 		return client_page;
 	}
+	
+	public int max_client_n_seq() {
+		int max_client_n_seq = 0;
+		String sql = "SELECT MAX(client_n_seq) from client";
+		try {
+			Connection con = ds.getConnection();
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			rs.next();
+			max_client_n_seq = rs.getInt(1);
+			System.out.println(max_client_n_seq);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		return max_client_n_seq;
+	}
+	
+	public BoardDTO client_retrieve(int client_n_seq) {
+		Statement stmt=null;
+		ResultSet rs = null;
+		BoardDTO data = new BoardDTO();
+		try {
+			Connection con = ds.getConnection();
+			
+			String sql = "select * from client where client_n_seq="+client_n_seq;
+			stmt=con.createStatement();
+			rs = stmt.executeQuery(sql);
+			if(rs.next()) {
+				data.setClient_n_seq(rs.getInt(1));
+				data.setClient_code(rs.getString(2));
+				data.setClientname(rs.getString(3));
+				data.setClient_idn(rs.getString(4));
+				
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		return data;
+	}
+	
+	
 	
 }

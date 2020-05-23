@@ -3,9 +3,16 @@
 <bean id="defaultHandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
 <bean id="boardDAO" class="board.dao.BoardDAO" />
 <bean name="/client_list.do" class="client.controller.ClientListActionController"><property name="dao"><ref bean="boardDAO" /></property></bean>
+<bean name="/temp.do" class="board.controller.TempListActionController"><property name="dao"><ref bean="boardDAO" /></property></bean>
+<bean name="/client_r_dpage.do" class="client.controller.ClientRetrieveActionController">
+<property name="dao">
+	<ref bean="boardDAO" />
+</property>
+</bean>
 <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 <property name="viewClass" value="org.springframework.web.servlet.view.InternalResourceView" />
 <property name="prefix" value="/" />
 <property name="suffix" value=".jsp" />
 </bean>
+
 </beans>

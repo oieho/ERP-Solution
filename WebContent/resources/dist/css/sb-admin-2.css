@@ -6,7 +6,9 @@
 body {
   background-color: #ffffff;
 }
-
+input{border:none;}
+input:focus {outline:none;}
+ul.boardbuttonlist li {list-style:none; margin-left:5px; float:left;}
 #wrapper {
   width: 100%;
 }
@@ -178,6 +180,8 @@ body {
   width: 100%;
   height: 100%;
 }
+table.dpagetbl {font-size:15pt;}
+table.dpagetbl th,td {padding:20px;}
 table.dataTable thead .sorting,
 table.dataTable thead .sorting_asc,
 table.dataTable thead .sorting_desc,
